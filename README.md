@@ -13,7 +13,7 @@ Each page or component is dedicated to one plugin or feature.
 
 ## 🎓 Learning Gatsby
 My journey with Gatsby has had a few false starts, following tutorials so far has only created more confusion, so I decided to KEEP IT SIMPLE and stick to documentation.
-
+24
 
 ## 🧐 What's inside?
 The following information is provided by the template. I've kept it for quick reference as needed.

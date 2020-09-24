@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -50,6 +49,7 @@ export default class MyGatsbyMailList extends React.Component {
 
   render () {
     return (
+      <Layout>
       <form onSubmit={this._handleSubmit}>
       <input
           type="text"
@@ -69,6 +69,7 @@ export default class MyGatsbyMailList extends React.Component {
    
       <input type="submit" />
   </form>
+  </Layout>
     )
   }
 }
