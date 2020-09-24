@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Yoli Meets Gatsby`,
+    description: `Compilation of Basic features using Plugins available for Gatsby sites `,
+    author: `@YoliYoli`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,11 +24,19 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/YChavianoLogo.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-mailchimp`,
+      options: {
+          endpoint: 'https://gmail.us2.list-manage.com/subscribe/post?u=7ba39ea1d15e2f73ee3bb16c6&amp;id=8260d77501', 
+          timeout: 3500, 
+          // the endpoint is copied from the EMBEDDED FORM found on MailChimp html code under Action Form
+      },
+    }
+    
   ],
 }
+
+
