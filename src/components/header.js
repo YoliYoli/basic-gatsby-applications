@@ -38,7 +38,9 @@ const Header = ({ siteTitle }) => (
       <ul style={{ listStyle: `none`, float: `right` }}>
           <ListLink to="/">Home</ListLink>
           <ListLink to="/mailchimpForm/">Form</ListLink>
-          <ListLink to="/contact/">Contact</ListLink>
+          <ListLink to="/about/">About</ListLink>
+          <ListLink to="/gallery/">Gallery</ListLink>
+          
         </ul>
     </div>
   </header>

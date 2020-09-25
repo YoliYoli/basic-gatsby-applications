@@ -1,10 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
+
+// page renders a form that collects information to send to mailchimp. 
 
 export default class MyGatsbyMailList extends React.Component {
  state = {
@@ -23,14 +22,6 @@ export default class MyGatsbyMailList extends React.Component {
 
   _handleSubmit = e => {
     e.preventDefault();
-
-    console.log('submit', this.state)
-
-    // addToMailchimp(this.state.email, {
-    //   FNAME: this.state.firstname,
-    //   LNAME: this.state.lastname,
-    // }).then ...
-
     addToMailchimp(this.state.email, this.state.name) 
     .then(({msg, result})=>{
       console.log('msg', `${result}: ${msg}`)
@@ -44,8 +35,6 @@ export default class MyGatsbyMailList extends React.Component {
       alert(err)
     })
   }
-
-
 
   render () {
     return (
@@ -64,11 +53,13 @@ export default class MyGatsbyMailList extends React.Component {
           name="email"
       />
       <br />
-      <br />
-      <b>Favorite color:</b>
-   
       <input type="submit" />
   </form>
+  <h3>Signup form connected to mailchimp</h3>
+  <p>Gatsby-plugin-mailchimp </p>
+  <p>This plugin exports one method — addToMailchimp — that accepts one required argument (email) and two optional fields (fields and endpointOverride).</p>
+  <p>email is a valid email string fields is an object of attributes youʼd like to save with the email address.</p>
+  <i>I chose to create a page instead of a component for the form, however ideally it would be a reusable component.</i>
   </Layout>
     )
   }
